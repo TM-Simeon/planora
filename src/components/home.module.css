@@ -1,0 +1,124 @@
+@media screen and (max-width: 350px) {
+    .home{
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        /* flex-direction: column; */
+        height: 100vh;
+        background-color: #E2DAF2;
+        /* background-color: #f0f0f0; */
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        height: 90vh;
+        min-width: 80vw;
+        /* width: 25vw; */
+        border-radius: 30px;
+        /* background-color: #f0f0f0; */
+        background-image: url('../assets/planoraHome.png');
+        /* background-repeat: no-repeat; */
+        /* background-size: contain; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
+    .buttons > p{
+        display: inline-block;
+        max-width: 50vw;
+        text-align: left;
+        margin-left: 5vw;
+        font-size: 6vw;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    .button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* background-color: red; */
+    }
+    .homeNav{
+        display: inline-block;
+        max-width: 90vw;
+        min-width: 65vw;
+        background-color: none;
+        border: 1px solid black;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .homeNav:first-child{
+        background-color: #00B1A3;
+        border: none;
+    }
+}
+
+
+@media screen and (min-width: 350px) {
+    .home{
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        /* flex-direction: column; */
+        height: 100vh;
+        background-color: #E2DAF2;
+        /* background-color: #f0f0f0; */
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        height: 90vh;
+        min-width: 300px;
+        /* width: 25vw; */
+        border-radius: 30px;
+        /* background-color: #f0f0f0; */
+        background-image: url('../assets/planoraHome.png');
+        /* background-repeat: no-repeat; */
+        /* background-size: contain; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
+    .buttons > p{
+        display: inline-block;
+        max-width: 50vw;
+        text-align: left;
+        margin-left: 5vw;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    .button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* background-color: red; */
+    }
+    .homeNav{
+        display: inline-block;
+        max-width: 300px;
+        min-width: 220px;
+        background-color: none;
+        border: 1px solid black;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .homeNav:first-child{
+        background-color: #00B1A3;
+        border: none;
+    }
+}
