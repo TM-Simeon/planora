@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import plus from '../assets/plus.png';
 import analytics from '../assets/analytics.png';
 import dashboard from '../assets/dashboard.png';
@@ -324,26 +324,27 @@ function Dashboard() {
                         <h3>Main Navigation</h3>
                         <span className={classes.dropdown}></span>
                     </div>
-                    <div className={classes.item}>
+                    <NavLink to="/dashboard" className={classes.item}>
                         <img src={dashboard} alt="" />
                         <p>Dashboard</p>
-                    </div>
-                    <div className={classes.item}>
+                    </NavLink>
+                    <NavLink to="/eventscreen" className={classes.item}>
                         <img src={manageevents} alt="" />
                         <p>Manage Events</p>
-                    </div>
-                    <div className={classes.item}>
+                    </NavLink>
+                    <NavLink to="" className={classes.item}>
                         <img src={booking} alt="" />
                         <p>Booking & Tickets</p>
-                    </div>
-                    <div className={classes.item}>
+                    </NavLink>
+                    <NavLink to="/attendanceinsight" className={classes.item}>
                         <img src={attendance} alt="" />
                         <p>Attendee insights</p>
-                    </div>
-                    <div className={classes.item}>
+                    </NavLink>
+                       
+                    <NavLink to="" className={classes.item}>
                         <img src={analytics} alt="" />
                         <p>Analytics & Reports</p>
-                    </div>
+                    </NavLink>
 
                 </div>
                 <div className={classes.support}>
@@ -415,7 +416,9 @@ function Dashboard() {
                 <div className={classes.mainContent}>
                     <div className={classes.mainContentMain}>
                         <div className={classes.highlights}>
-                            <div className={classes.highlight}>
+                            <NavLink to="/eventscreen" className={classes.addEvent}>
+                                
+                            <div className={classes.highlight} >
                                 <img src={dancing} alt="" className={classes.analytics} />
                                 <div className={classes.highlightText}>
                                     <p>Events</p>
@@ -423,6 +426,8 @@ function Dashboard() {
                                 </div>
 
                             </div>
+                            </NavLink>
+
                             <div className={classes.highlight}>
                                 <img src={movieticket} alt="" className={classes.analytics} />
                                 <div className={classes.highlightText}>

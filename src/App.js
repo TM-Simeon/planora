@@ -7,6 +7,9 @@ import CreateEvent from './components/createEvent';
 import Events from './components/events';
 import GuestList from './components/guestlist';
 import Dashboard from './components/dashboard';
+import EventScreen from './components/eventscreen';
+import Attendanceinsight from './components/attendanceinsight';
+
 
 import './App.css';
 import MyProvider from './MyProvider';
@@ -28,6 +31,8 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/guestlist" element={<GuestList />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/eventscreen" element={<EventScreen />} />
+          <Route path="/attendanceinsight" element={<Attendanceinsight />} />
         </Routes>
       </div>
       </Router>

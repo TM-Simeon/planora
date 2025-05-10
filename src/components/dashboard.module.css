@@ -79,6 +79,8 @@
 .item > p{
     margin-left: 20px;
     font-size: 0.8vw;
+    text-decoration: none;
+    color: white;
     /* line-height: 20px; */
 }
 .content{
