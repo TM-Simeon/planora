@@ -282,28 +282,28 @@ function Attendanceinsight() {
                             <h2>Engagement & Social Media Reach</h2>
                             <p>How attendees engaged with the event</p>
                             <div className={classes.engagement}>
-                                <div>
+                                <div  className={classes.engagementpic}>
                                     <img src={instagram} alt="Engagement"/>
                                     <p>Instagram Mentions</p>
                                 </div>
                                 <p>5,200</p>
                             </div>
                             <div className={classes.engagement}>
-                                <div>
+                                <div  className={classes.engagementpic}>
                                     <img src={facebook} alt="Engagement"/>
                                     <p>Facebook Shares</p>
                                 </div>
                                 <p>3,800</p>
                             </div>
                             <div className={classes.engagement}>
-                                <div>
+                                <div  className={classes.engagementpic}>
                                     <img src={twitter} alt="Engagement"/>
                                     <p>Twitter Tweets </p>
                                 </div>
                                 <p>1,200</p>
                             </div>
                             <div className={classes.engagement}>
-                                <div>
+                                <div  className={classes.engagementpic}>
                                     <img src={instagram} alt="Engagement"/>
                                     <p>Event Check-ins (QR scans)</p>
                                 </div>
