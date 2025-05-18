@@ -16,6 +16,7 @@ const DoughnutChart = () => {
         label: 'Votes',
         data: values,
         backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
+        radius: '60%', 
       },
     ],
   };
@@ -30,9 +31,9 @@ const DoughnutChart = () => {
           const percentage = ((value / total) * 100).toFixed(1) + '%';
           return `${value} (${percentage})`;
         },
-        anchor: 'center',
-        align: 'center',
-        offset: 10,
+        anchor: 'end',
+        align: 'end',
+        offset: 20,
         font: {
           weight: 'bold'
         }

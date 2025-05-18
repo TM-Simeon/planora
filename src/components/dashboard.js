@@ -8,6 +8,8 @@ import booking from '../assets/booking.png';
 import attendance from '../assets/attendance.png';
 import support from '../assets/support.png';
 import notifications from '../assets/notifications.png';
+import not from '../assets/not.png';
+import filter from '../assets/filter.png';
 import settings from '../assets/settings.png';
 import marketing from '../assets/marketing.png';
 import categories from '../assets/categories.png';
@@ -392,7 +394,7 @@ function Dashboard() {
                     </div>
                     <div className={classes.item}>
                         <img src={logout} alt="" />
-                        <p>Logout</p>
+                        <NavLink to="/" className={classes.item}><p>Logout</p></NavLink>
                     </div>
 
                 </div>
@@ -408,7 +410,7 @@ function Dashboard() {
                     </div>
                    <div className={classes.searchContainer}>
                         <input type="text" placeholder="Search" className={classes.search} />
-                        <img src={notifications} alt="" className={classes.notifications} />
+                        <img src={not} alt="" className={classes.searchnotifications} />
                         <img src={eventaccepted} alt="" className={classes.eventaccepted} />
                    </div>
                   
@@ -416,40 +418,72 @@ function Dashboard() {
                 <div className={classes.mainContent}>
                     <div className={classes.mainContentMain}>
                         <div className={classes.highlights}>
-                            <NavLink to="/eventscreen" className={classes.addEvent}>
+                            <NavLink to="/eventscreen" className={classes.highlight}>
                                 
-                            <div className={classes.highlight} >
+                            {/* <div className={classes.highlight} > */}
                                 <img src={dancing} alt="" className={classes.analytics} />
                                 <div className={classes.highlightText}>
                                     <p>Events</p>
-                                    <h3>28 Events</h3>
+                                    <h3 className={classes.highlightevents}>28 Events</h3>
                                 </div>
 
-                            </div>
+                            {/* </div> */}
                             </NavLink>
 
                             <div className={classes.highlight}>
                                 <img src={movieticket} alt="" className={classes.analytics} />
                                 <div className={classes.highlightText}>
                                     <p>Bookings</p>
-                                    <h3>2,7598</h3>
+                                    <h3 className={classes.bookings}>2,7598</h3>
                                 </div>
                             </div>
                             <div className={classes.highlight}>
                                 <img src={transaction} alt="" className={classes.analytics} />
                                 <div className={classes.highlightText}>
                                     <p>Revenue</p>
-                                    <h3>&pound; 5,000,000</h3>
+                                    <h3 className={classes.revenue}>&pound; 5,000,000</h3>
                                 </div>
                             </div>
                         </div>
                         <div className={classes.chartanalytics}>
                             <div className={classes.linechart}>
-                                <h2>Net Sales</h2>
+                                <div>
+                                    <div className={classes.linechartTitle}>
+                                        <div className={classes.linechartnetsales}>
+                                            <h2>Net Sales</h2>
+                                            <span className={classes.netsalesdropdown}></span>
+                                        </div>
+                                        <div className={classes.linechartfilter}>
+                                            <div className={classes.filterimg}>
+                                                <img src={filter} alt=""/>
+                                                <p>Filter</p>
+                                            </div>
+                                            <p>Weekly</p>
+                                        </div>
+                                    </div>
+                                    <div className={classes.linechartnumbers}>
+                                        <span className={classes.linechartnumber}>
+                                            <p>Total Revenue</p>
+                                            <h3>&pound; 40,000,000</h3>
+                                        </span>
+                                        <span  className={classes.linechartnumber}>
+                                            <p>Total Tickets</p>
+                                            <h3>&pound; 2438 Tickets</h3>
+                                        </span>
+                                        <span  className={classes.linechartnumber}>
+                                            <p>Total Events</p>
+                                            <h3>&pound; 32 Events</h3>
+                                        </span>
+                                    </div>
+                                </div>
                                 <LineChart />
                             </div>
                             <div className={classes.doughnutchart}>
-                            <PieChart />
+                                <div className={classes.doughnutchartTitle}>
+                                    <h2>Customer <br></br>
+                                    Engagement</h2>
+                                </div>
+                                <PieChart />
 
                             </div>
                         </div>

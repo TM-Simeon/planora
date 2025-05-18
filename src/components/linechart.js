@@ -1,63 +1,77 @@
-// LineChart.js
-import React from 'react';
 import {
   Chart as ChartJS,
   LineElement,
   PointElement,
-  CategoryScale,
   LinearScale,
-  Title,
+  CategoryScale,
+  LineController,
   Tooltip,
-  Legend
+  Legend,
 } from 'chart.js';
-
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Line } from 'react-chartjs-2';
 
-
-// Register chart components
 ChartJS.register(
   LineElement,
   PointElement,
-  CategoryScale,
   LinearScale,
-  Title,
+  CategoryScale,
+  LineController,
   Tooltip,
-  Legend
+  Legend,
+  ChartDataLabels
 );
 
-const LineChart = () => {
-  const data = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-    datasets: [
-      {
-        label: 'Sales',
-        data: [12, 19, 3, 5, 2],
-        borderColor: 'blue',
-        tension: 0.4,
-        fill: false
-      }
-    ]
-  };
+const dataPoints = [null, 75, 19, 60, 71, 22, null];
 
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top'
-      },
-      title: {
-        display: true,
-        text: 'Monthly Sales'
-      }
+const data = {
+  labels: ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', ''],
+  datasets: [
+    {
+      label: 'My Dataset',
+      data: dataPoints,
+      borderColor: 'blue',
+      tension: 0, // sharp lines
+      fill: false,
     },
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  };
-
-  return <Line data={data} options={options} />;
+  ],
 };
 
-export default LineChart;
+const maxY = Math.max(...dataPoints) + 30; // Add 2 units of top space
+
+const options = {
+  responsive: true,
+  plugins: {
+    legend: { display: false },
+    datalabels: {
+      color: 'black',
+      font: {
+        weight: 'bold',
+      },
+      offset: 10, // distance from point
+      align: (context) => {
+        // Alternate position: above for even indexes, below for odd
+        return context.dataIndex % 2 === 0 ? 'top' : 'bottom';
+      },
+      formatter: (value) => `${value}`, // Show the number
+    },
+  },
+  scales: {
+    x: {
+      grid: {
+        display: false,
+      },
+    },
+    y: {
+      beginAtZero: true,
+      max: maxY,
+      grid: {
+        display: true,
+      },
+    },
+  },
+};
+
+export default function MyLineChart() {
+  return <Line data={data} options={options} />;
+}

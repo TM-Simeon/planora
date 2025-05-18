@@ -277,7 +277,7 @@ function Attendanceinsight() {
                             </div>
                         </div>
                    </div>
-                   <div>
+                   <div className={classes.sidebarright}>
                         <div className={classes.attendeesocial}>
                             <h2>Engagement & Social Media Reach</h2>
                             <p>How attendees engaged with the event</p>
@@ -309,9 +309,38 @@ function Attendanceinsight() {
                                 </div>
                                 <p>9,500</p>
                             </div>
-                            <div>TOTAL COUNT: 19,700</div>
+                            <div className={classes.totalcount}>
+                               <h2>TOTAL COUNT: 19,700</h2> 
+                            </div>
                         </div>
-                        <div>
+                        <div className={classes.attendeelocat}>
+                            <h2>ATTENDEE LOCATIONS</h2>
+                            <table className={classes.locationtable}>
+                            <thead>
+                                <tr>
+                                <th>Location</th>
+                                {/* <th>Age</th> */}
+                                <th colspan="2">Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alice</td>
+                                    <td>28</td>
+                                    <td>Engineer</td>
+                                </tr>
+                                <tr>
+                                    <td>Bob</td>
+                                    <td>34</td>
+                                    <td>Designer</td>
+                                </tr>
+                                <tr>
+                                    <td>Charlie</td>
+                                    <td>42</td>
+                                    <td>Manager</td>
+                                </tr>
+                            </tbody>
+                            </table>
 
                         </div>
                    </div>

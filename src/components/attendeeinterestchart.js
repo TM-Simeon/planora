@@ -6,8 +6,8 @@ import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, ChartDataLabels);
 
 const AttendeeInterestChart = () => {
-  const labels = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
-  const values = [12, 19, 3, 5, 2, 7];
+  const labels = [ 'Yellow', 'Green', 'Purple', 'Orange'];
+  const values = [12, 19, 3, 5];
 
   const data = {
     labels,
@@ -15,7 +15,8 @@ const AttendeeInterestChart = () => {
       {
         label: 'Votes',
         data: values,
-        backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
+        backgroundColor: [ 'yellow', 'green', 'purple', 'orange'],
+        radius: '60%',
       },
     ],
   };
@@ -30,8 +31,8 @@ const AttendeeInterestChart = () => {
           const percentage = ((value / total) * 100).toFixed(1) + '%';
           return `${value} (${percentage})`;
         },
-        anchor: 'center',
-        align: 'center',
+        anchor: 'end',
+        align: 'end',
         offset: 10,
         font: {
           weight: 'bold'

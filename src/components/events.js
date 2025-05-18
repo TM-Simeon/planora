@@ -68,16 +68,17 @@ function Events() {
     ]
 
     return (
-        <div className={classes.dashboard}>
+        <div className={classes.dashboardContainer}>
+            <div className={classes.dashboard}>
             <div className={classes.welcomeNotecontainer}>
                 <div className={classes.todayDate}>
-                    25/04/25
+                   25/04/25
                 </div>
                 <div className={classes.welcomeNote}>
                     <p className={classes.title}>Welcome back, Hauwa!</p>
                     <div className={classes.icons}>
                         <img src={notification} alt="" className={classes.icon} />
-                        <img src={profile} alt="" className={classes.icon} />
+                        <NavLink to="/dashboard"><img src={profile} alt="" className={classes.icon} /></NavLink>
                     </div>
                 </div>
                
@@ -116,7 +117,7 @@ function Events() {
                     <label className={classes.label}>My Guest</label>
                 </div>
                 <div className={`${classes.footlink} ${classes.plus}`}>
-                    <img src={plus} alt=" " className={classes.icon} />
+                    <NavLink to="/createEvent"><img src={plus} alt=" " className={classes.icon} /></NavLink>
                 </div>
                 <div className={classes.footlink}>
                     <img src={tickets} alt=" " className={classes.icon} />
@@ -128,7 +129,7 @@ function Events() {
                 </div>
             </div>
         
-
+            </div>
         </div>
         
        );

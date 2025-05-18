@@ -15,7 +15,8 @@ import { upload } from '@testing-library/user-event/dist/upload';
 function CreateEvent() {
 
     return (
-        <div className={classes.createEvent}>
+        <div className={classes.createEventContainer}>
+            <div className={classes.createEvent}>
             <div>
                 <div className={classes.createEventbar}>
                     <img src={backArrow} alt="Back" className={classes.backArrow} />
@@ -52,17 +53,22 @@ function CreateEvent() {
                         <label htmlFor="event-description" className={classes.label}>Category</label>
                         <select id="event-description" className={`${classes.select} ${classes.category}`} >
                             <option value="category1">&nbsp;&nbsp;Select Venue</option>
+                            <option value="category2">&nbsp;&nbsp;Sports</option>
+                            <option value="category3">&nbsp;&nbsp;Music</option>
+                            <option value="category4">&nbsp;&nbsp;Dance</option>
+                            <option value="category5">&nbsp;&nbsp;Art</option>
+                            <option value="category6">&nbsp;&nbsp;Food</option>
                         </select>
                     </div>
                     <div className={classes.eventDescription}>
                         <label htmlFor="event-description" className={classes.label}>Description</label>
                         <textarea id="event-description" className={classes.textarea} placeholder='Write description'/>
                     </div>
-                    <button className={classes.createEventButton}>Create Event</button>
+                    <NavLink to="/dashboard"><button className={classes.createEventButton}>Create Event</button></NavLink>
                 </div>
 
             </div>
-            
+            </div>
      
         </div>
         

@@ -27,7 +27,7 @@ function Login() {
                     </div>
                     <label className={classes.label}>Forget Password?</label>
                 </div>
-                <NavLink to="/dashboard" className={classes.loginNav}>Login</NavLink>
+                <NavLink to="/events" className={classes.loginNav}>Login</NavLink>
                 <div className={classes.organizer}>
                     <p>An Organizer?</p>
                     <NavLink to="/signup" className={classes.organizerAccount}>Login or Sign Up</NavLink>

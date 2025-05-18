@@ -1,152 +1,332 @@
-.createEvent{
-    background-color: #EFE9F8;
-    min-height: 100vh;
-    font-family: roboto;
-}
-.createEventbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0px 20px;
-    padding: 0px 5px;
-}
-.createEventbar > img{
-    height: 11px;
-    padding : 4px;
-    border: 2px solid #000;
-    border-radius: 50%;
-}
-.uploadImage{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 150px;
-    background-color: white;
-    margin: 0px 20px;
-    border-radius: 20px;
-}
-.uploadInput{
-    display: none;
-}
-.select{
-    background: url('../assets/locationicon.png') no-repeat scroll 7px 7px;
-    background-size: 15px 15px;
-    background-position: 5px center;
-    padding-left: 15px;
-}
-.select > option{
-    margin-left: 10px;
-}
-.eventName{
-    display: flex;
-    flex-direction: column;
-    margin: 0px 20px;
-}
-.eventName > label{
-    text-align: left;
-    margin-top: 10px;
-}
-.eventName > input{
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-}
-.eventDetails{
-    display: flex;
-    justify-content: space-between ;
-    margin: 15px 20px 0px 20px;
-    /* margin-top: 15px; */
-}
-.eventDate{
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-}
-.eventDate > label{
-    text-align: left;
-    /* font-size: 7vw; */
-    font-size: clamp(12px, 2vw, 16px);
-    margin-bottom: 5px;
-}
-.eventDate > input[type="date"]{
-    min-width: 35vw;
-    padding: 10px 0px;
-    font-size: 4vw;
-    height: 10px;
-}
-.eventTime{
-    display: flex;
-    flex-direction: column;
-}
-.eventTime > label{
-    text-align: left;
-    /* font-size: 7vw; */
-    font-size: clamp(12px, 2vw, 16px);
-    margin-bottom: 5px;
-}
-.eventTime > input[type="time"]{
-    min-width: 35vw;
-    padding: 10px 0px;
-    font-size: 5vw;
-    height: 10px;
+@media screen and (min-width: 250px){
+    .createEvent{
+        background-color: #EFE9F8;
+        min-height: 100vh;
+        font-family: roboto;
+    }
+    .createEventbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 20px;
+        padding: 0px 5px;
+    }
+    .createEventbar > img{
+        height: 11px;
+        padding : 4px;
+        border: 2px solid #000;
+        border-radius: 50%;
+    }
+    .uploadImage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 150px;
+        background-color: white;
+        margin: 0px 20px;
+        border-radius: 20px;
+    }
+    .uploadInput{
+        display: none;
+    }
+    .select{
+        background: url('../assets/locationicon.png') no-repeat scroll 7px 7px;
+        background-size: 15px 15px;
+        background-position: 5px center;
+        padding-left: 15px;
+    }
+    .select > option{
+        margin-left: 10px;
+    }
+    .eventName{
+        display: flex;
+        flex-direction: column;
+        margin: 0px 20px;
+    }
+    .eventName > label{
+        text-align: left;
+        margin-top: 10px;
+    }
+    .eventName > input{
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+    }
+    .eventDetails{
+        display: flex;
+        justify-content: space-between ;
+        margin: 15px 20px 0px 20px;
+        /* margin-top: 15px; */
+    }
+    .eventDate{
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+    }
+    .eventDate > label{
+        text-align: left;
+        /* font-size: 7vw; */
+        font-size: clamp(12px, 2vw, 16px);
+        margin-bottom: 5px;
+    }
+    .eventDate > input[type="date"]{
+        min-width: 35vw;
+        padding: 10px 0px;
+        font-size: 4vw;
+        height: 10px;
+    }
+    .eventTime{
+        display: flex;
+        flex-direction: column;
+    }
+    .eventTime > label{
+        text-align: left;
+        /* font-size: 7vw; */
+        font-size: clamp(12px, 2vw, 16px);
+        margin-bottom: 5px;
+    }
+    .eventTime > input[type="time"]{
+        min-width: 35vw;
+        padding: 10px 0px;
+        font-size: 5vw;
+        height: 10px;
+    }
+
+    .eventVenue{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 20px 0px 20px;
+    }
+    .eventVenue > label{
+        text-align: left;
+        font-size: clamp(12px, 2vw, 16px);
+
+    }
+    .eventVenue > input{
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+    }
+    .eventCategory{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 20px 0px 20px;
+    }
+    .eventCategory > label{
+        text-align: left;
+        font-size: clamp(12px, 2vw, 16px);
+
+    }
+    .eventCategory > select{
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+    }
+    .eventDescription{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 20px 0px 20px;
+    }
+
+    .eventDescription > label{
+        text-align: left;
+        font-size: clamp(12px, 2vw, 16px);
+
+    }
+    .eventDescription > textarea{
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        min-height: 70px;
+    }
+    .createEventButton{
+        padding: 10px;
+        width: 80vw;
+        margin: 10px 0px;
+        background-color: #00B1A3;
+        border-radius: 7px;
+        border: none;
+        color: white;
+
+    }
+
 }
 
-.eventVenue{
-    display: flex;
-    flex-direction: column;
-    margin: 15px 20px 0px 20px;
-}
-.eventVenue > label{
-    text-align: left;
-    font-size: clamp(12px, 2vw, 16px);
 
-}
-.eventVenue > input{
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-}
-.eventCategory{
-    display: flex;
-    flex-direction: column;
-    margin: 15px 20px 0px 20px;
-}
-.eventCategory > label{
-    text-align: left;
-    font-size: clamp(12px, 2vw, 16px);
 
-}
-.eventCategory > select{
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
-}
-.eventDescription{
-    display: flex;
-    flex-direction: column;
-    margin: 15px 20px 0px 20px;
-}
 
-.eventDescription > label{
-    text-align: left;
-    font-size: clamp(12px, 2vw, 16px);
 
-}
-.eventDescription > textarea{
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    min-height: 70px;
-}
-.createEventButton{
-    padding: 10px;
-    width: 80vw;
-    margin: 10px 0px;
-    background-color: #00B1A3;
-    border-radius: 7px;
-    border: none;
-    color: white;
 
+
+
+
+
+@media screen and (min-width: 768px){
+    .createEventContainer{
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        /* text-align: center */
+
+    }
+    .createEvent{
+        background-color: #EFE9F8;
+        min-height: 100vh;
+        font-family: roboto;
+        max-width: 400px;
+        margin: 20px 0px;
+        border-radius: 20px;
+    }
+    .createEventbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 20px;
+        padding: 0px 5px;
+    }
+    .createEventbar > img{
+        height: 11px;
+        padding : 4px;
+        border: 2px solid #000;
+        border-radius: 50%;
+    }
+    .uploadImage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 150px;
+        background-color: white;
+        margin: 0px 20px;
+        border-radius: 20px;
+    }
+    .uploadInput{
+        display: none;
+    }
+    .select{
+        background: url('../assets/locationicon.png') no-repeat scroll 7px 7px;
+        background-size: 15px 15px;
+        background-position: 5px center;
+        padding-left: 15px;
+    }
+    .select > option{
+        margin-left: 10px;
+    }
+    .eventName{
+        display: flex;
+        flex-direction: column;
+        margin: 0px 20px;
+    }
+    .eventName > label{
+        text-align: left;
+        margin-top: 10px;
+    }
+    .eventName > input{
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+    }
+    .eventDetails{
+        display: flex;
+        justify-content: space-between ;
+        margin: 15px 20px 0px 20px;
+        /* margin-top: 15px; */
+    }
+    .eventDate{
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+    }
+    .eventDate > label{
+        text-align: left;
+        /* font-size: 7vw; */
+        font-size: clamp(12px, 2vw, 16px);
+        margin-bottom: 5px;
+    }
+    .eventDate > input[type="date"]{
+        min-width: 130px;
+        max-width: 200px;
+        padding: 10px 0px;
+        font-size: 10px;
+        height: 10px;
+    }
+    .eventTime{
+        display: flex;
+        flex-direction: column;
+    }
+    .eventTime > label{
+        text-align: left;
+        /* font-size: 7vw; */
+        font-size: clamp(12px, 2vw, 16px);
+        margin-bottom: 5px;
+    }
+    .eventTime > input[type="time"]{
+        min-width: 35px;
+        max-width: 290px;
+        padding: 10px 0px;
+        font-size: 10px;
+        height: 10px;
+    }
+
+    .eventVenue{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 20px 0px 20px;
+    }
+    .eventVenue > label{
+        text-align: left;
+        font-size: clamp(12px, 2vw, 16px);
+
+    }
+    .eventVenue > input{
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+    }
+    .eventCategory{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 20px 0px 20px;
+    }
+    .eventCategory > label{
+        text-align: left;
+        font-size: clamp(12px, 2vw, 16px);
+
+    }
+    .eventCategory > select{
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+    }
+    .eventDescription{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 20px 0px 20px;
+    }
+
+    .eventDescription > label{
+        text-align: left;
+        font-size: clamp(12px, 2vw, 16px);
+
+    }
+    .eventDescription > textarea{
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        min-height: 70px;
+    }
+    .createEventButton{
+        padding: 20px;
+        min-width: 350px;
+        max-width: 250px;
+        margin: 20px 0px;
+        background-color: #00B1A3;
+        border-radius: 7px;
+        border: none;
+        color: white;
+
+    }
 }
